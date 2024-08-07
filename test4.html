@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bong bóng hội thoại hình tròn</title>
+    <style>
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 300px;
+            height: 500px;
+            margin: 0 auto;
+        }
+        .chat-bubble {
+            position: relative;
+            background: #00aabb;
+            border-radius: 50%;
+            padding: 20px;
+            text-align: center;
+            vertical-align: middle;
+            color: white;
+            margin: 10px 0;
+            height: 20%;
+            max-width: 80%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .chat-bubble .p{
+            text-align: center;
+            margin: 0;
+        }
+        .chat-bubble::after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 10px 10px 0 10px;
+            border-color: #00aabb transparent transparent transparent;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .chat-bubble.right {
+            align-self: flex-end;
+            background: #0084ff;
+        }
+        .chat-bubble.right::after {
+            border-color: #0084ff transparent transparent transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-bubble"><p>Xin chào! Đây là một bong bóng chat hình tròn.</p></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+.rotating-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.rotating-text span.text {
+  display: inline-block;
+  animation: rotate 1.5s ease-in-out ;
+  animation-delay: calc(var(--i) * 1.5s);
+}
+
+.rotating-text .space {
+  margin-right: 10px; /* Khoảng cách giữa các từ */
+}
+
+/* Keyframes cho hiệu ứng xoay */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+}
+
+/* Cài đặt thứ tự cho từng ký tự */
+.rotating-text span:nth-child(1) { --i: 0; }
+.rotating-text span:nth-child(2) { --i: 1; }
+/* .rotating-text span:nth-child(3) { --i: 2; } */
+.rotating-text span:nth-child(4) { --i: 2; }
+.rotating-text span:nth-child(5) { --i: 3; }
+.rotating-text span:nth-child(6) { --i: 4; }
+/* .rotating-text span:nth-child(7) { --i: 6; } */
+.rotating-text span:nth-child(8) { --i: 5; }
+.rotating-text span:nth-child(9) { --i: 6; }
+/* .rotating-text span:nth-child(10) { --i: 9; } */
+.rotating-text span:nth-child(11) { --i: 7; }
+.rotating-text span:nth-child(12) { --i: 8; }
+.rotating-text span:nth-child(13) { --i: 9; }
+/* .rotating-text span:nth-child(14) { --i: 13; } */
+.rotating-text span:nth-child(15) { --i: 10; }
+.rotating-text span:nth-child(16) { --i: 11; }
+.rotating-text span:nth-child(17) { --i: 12; }
+/* .rotating-text span:nth-child(18) { --i: 17; } */
+.rotating-text span:nth-child(19) { --i: 13; }
+.rotating-text span:nth-child(20) { --i: 14; }
+/* .rotating-text span:nth-child(21) { --i: 20; } */
+.rotating-text span:nth-child(22) { --i: 15; }
+.rotating-text span:nth-child(23) { --i: 16; }
+.rotating-text span:nth-child(24) { --i: 18; }
+/* .rotating-text span:nth-child(25) { --i: 24; } */
